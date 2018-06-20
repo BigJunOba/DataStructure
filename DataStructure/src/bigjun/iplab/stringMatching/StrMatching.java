@@ -1,7 +1,5 @@
 package bigjun.iplab.stringMatching;
 
-import javax.security.auth.kerberos.KerberosKey;
-
 public class StrMatching implements StrMatchingINF{
 	
 	private char[] strElem;
@@ -200,8 +198,8 @@ public class StrMatching implements StrMatchingINF{
 	/***********************************************************************/
 	
 	public static void main(String[] args) throws Exception {
-		StrMatching str1 = new StrMatching("aaaaa");
-		StrMatching str2 = new StrMatching("ab");
+		StrMatching str1 = new StrMatching("aaaaaaab");
+		StrMatching str2 = new StrMatching("aaaab");
 		System.out.println("采用BF算法，   主串和子串在主串数组下标为" + str1.indexOf_BF(str2, 0) + "的位置首次匹配成功");
 		System.out.println("采用KMP算法，主串和子串在主串数组下标为" + str1.indexOf_KMP(str2, 0) + "的位置首次匹配成功");
 		System.out.println("采用改进的KMP算法，主串和子串在主串数组下标为" + str1.indexOf_ImprovedKMP(str2, 0) + "的位置首次匹配成功");
@@ -209,10 +207,10 @@ public class StrMatching implements StrMatchingINF{
 		System.out.println("采用KMP算法，比较次数为: " + str1.indexOf_KMPCount(str2, 0));
 		System.out.println("采用改进的KMP算法，比较次数为: " + str1.indexOf_ImprovedKMPCount(str2, 0));
 		
-		System.out.println();
+		System.out.println();	
 		
-		StrMatching str3 = new StrMatching("aaaab");
-		StrMatching str4 = new StrMatching("ab");
+		StrMatching str3 = new StrMatching("aaaaaaaa");
+		StrMatching str4 = new StrMatching("aaaab");
 		System.out.println("采用BF算法，   主串和子串在主串数组下标为" + str3.indexOf_BF(str4, 0) + "的位置首次匹配成功");
 		System.out.println("采用KMP算法，主串和子串在主串数组下标为" + str3.indexOf_KMP(str4, 0) + "的位置首次匹配成功");
 		System.out.println("采用改进的KMP算法，主串和子串在主串数组下标为" + str3.indexOf_ImprovedKMP(str4, 0) + "的位置首次匹配成功");
