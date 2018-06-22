@@ -11,8 +11,8 @@ public interface LinkQueueINF {
     public Object getHeadElem() throws Exception;
     // 在链队列的队尾插入元素e
     public void queueEnter(Object e);
-    // 删除链队列队头元素
-    public void queueDel() throws Exception ;
+    // 删除链队列队头元素并返回
+    public Object queuePoll() throws Exception;
     // 输出链队列中的所有元素
     public void queueTraverse();
 }
