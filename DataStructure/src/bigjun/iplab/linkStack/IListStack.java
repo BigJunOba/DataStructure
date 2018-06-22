@@ -8,11 +8,11 @@ public interface IListStack {
     // 求顺序栈的长度
     public int stackLength();
     // 读取顺序栈的栈顶元素
-    public int getTopElem() throws Exception;
+    public Object getTopElem() throws Exception;
     // 在顺序栈中插入元素e
-    public void stackPush(int e);
+    public void stackPush(Object e);
     // 删除顺序栈中的栈顶元素
-    public void stackPop() throws Exception ;
+    public Object stackPop() throws Exception ;
     // 输出顺序栈中的所有元素
     public void stackTraverse();
 }

@@ -2,12 +2,8 @@ package bigjun.iplab.linkStack;
 
 public class LinkStack implements IListStack {
 	
-	public Node top;
+	private Node top;
 	
-	public LinkStack() {
-		top = new Node();
-	}
-
 	public boolean isStackEmpty() {
 		return top == null;
 	}
@@ -19,14 +15,14 @@ public class LinkStack implements IListStack {
 	public int stackLength() {
 		Node pNode = top;     // 初始化，pNode指向栈顶元素
 		int length = 0;       // length为计数器
-		while (pNode != null) 
+		while (pNode != null) {
 			pNode = pNode.next;
 			++length;
+		}
 		return length;
 	}
 
-	@Override
-	public int getTopElem() throws Exception {
+	public Object getTopElem() throws Exception {
 		if (!isStackEmpty()) {
 			return top.data;
 		} else {
@@ -34,25 +30,27 @@ public class LinkStack implements IListStack {
 		}
 	}
 
-	public void stackPush(int e) {
+	public void stackPush(Object e) {
 		Node p = new Node(e);
 		p.next = top;
 		top = p;
 	}
 
-	public void stackPop() throws Exception {
+	public Object stackPop() throws Exception {
 		if (isStackEmpty()) 
 			throw new Exception("栈为空，无法弹出栈顶元素");
 		else {
+			Node p = top;
 			top = top.next;
+			return p.data;
 		}
 	}
 
 	public void stackTraverse() {    // 从栈顶元素到栈底元素
 		Node p = top;
 		System.out.print("此时，链栈中的元素为: ");
-		while (p.data != null) {// 这块有一个问题，就是由于Node类的构造函数的原因，第一个Node的data会为空，如果用p ！= null的话，就会输出一个null
-			System.out.print(p.data + " ");
+		while (p != null) {
+			System.out.print(p.data.toString() + " ");
 			p = p.next;
 		}
 		System.out.println();
