@@ -12,7 +12,7 @@ public class LinkQueue implements LinkQueueINF{
 	}
 
 	public boolean isqueueEmpty() {
-		return front == rear;
+		return front == null;  			// 判断链队列为空时，只需观察front结点是否为空即可
 	}
 
 	public void queueClear() {
@@ -49,10 +49,9 @@ public class LinkQueue implements LinkQueueINF{
 		if (front != null) {		// 如果队列不为空
 			Node p = front;			// p指向被删除的队头结点
 			front = front.next;		// 队头结点出队列
-			if (p == rear) {		// 如果被删除的结点是队尾最后一个结点
+			if (p == rear) 		    // 队列只有一个结点，front和rear都是这个结点
 				rear = null;		// 令队尾结点为空
-			}
-			return p.data;			// 返回 被删除的结点的数据域
+			return p.data;			// 返回被删除的结点的数据域
 		} else {
 			throw new Exception("链队列为空，无法删除队头元素并返回");
 		}
