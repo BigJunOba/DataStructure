@@ -29,13 +29,13 @@ public class LinkQueue implements LinkQueueINF{
 		return length;
 	}
 
-	public int getHeadElem() throws Exception {
+	public Object getHeadElem() throws Exception {
 		if (front == null) 
 			throw new Exception("顺序队列为空，无法获取队头元素");
 		return front.data;
 	}
 
-	public void queueEnter(int e){
+	public void queueEnter(Object e){
 		Node p = new Node(e);
 		if (front != null) {
 			rear.next = p;
@@ -46,7 +46,7 @@ public class LinkQueue implements LinkQueueINF{
 	}
 
 	public void queueDel() throws Exception {
-		if (front == null || front.next==rear) 
+		if (front == null || front.next == rear) 
 			throw new Exception("链队列为空，无法删除队头元素");
 		front = front.next;
 	}

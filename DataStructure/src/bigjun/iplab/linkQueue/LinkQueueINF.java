@@ -8,11 +8,11 @@ public interface LinkQueueINF {
     // 求链队列的长度
     public int queueLength();
     // 读取链队列的队列队头元素
-    public int getHeadElem() throws Exception;
+    public Object getHeadElem() throws Exception;
     // 在链队列的队尾插入元素e
-    public void queueEnter(int e) throws Exception;
+    public void queueEnter(Object e);
     // 删除链队列队头元素
     public void queueDel() throws Exception ;
     // 输出链队列中的所有元素
-    public void queueTraverse() throws Exception;
+    public void queueTraverse();
 }
