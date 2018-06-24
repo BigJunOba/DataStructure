@@ -1,5 +1,4 @@
 package bigjun.iplab.linkBiTree;
-
 import bigjun.iplab.linkQueue.LinkQueue;
 import bigjun.iplab.linkStack.LinkStack;
 /**

@@ -11,7 +11,7 @@ public class BiTreeNode {
 	public BiTreeNode() {
 	}
 	
-	// 构造方法2:构造一个没有左右孩子的结点
+	// 构造方法2:构造一个只有数据域，左、右孩子域都为空的结点
 	public BiTreeNode(Object data) {
 		this(data, null, null);
 	}
