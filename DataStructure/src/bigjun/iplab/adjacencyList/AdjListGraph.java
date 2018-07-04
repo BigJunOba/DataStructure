@@ -206,7 +206,7 @@ public class AdjListGraph implements AdjacencyListGraphINF{
 		ArcNode arc = new ArcNode(u);
 		arc.nextArc = vexs[v].firstArc;
 		vexs[v].firstArc = arc;
-	}
+	}	
 	
 	public static void main(String[] args) throws Exception {
 		AdjListGraph aListGraph = new AdjListGraph();
@@ -218,5 +218,7 @@ public class AdjListGraph implements AdjacencyListGraphINF{
 		System.out.println("顶点数组下标为2的相对于顶点数组下标为0的下一个邻接点的数组下标是: " + aListGraph.nextAdjvex(2, 0));
 		int numOfV2toV0next = aListGraph.nextAdjvex(2, 0);
 		System.out.println("顶点V2相对于V0的邻接点是: " + aListGraph.getVex(numOfV2toV0next));
+		Depth_First_Search.DFSTraverse(aListGraph);
+		Breadth_First_Search.BFSTraverse(aListGraph);
 	}
 }
