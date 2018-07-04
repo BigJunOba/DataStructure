@@ -10,6 +10,10 @@ public interface AdjacencyMatrixGraphINF {
 	public int getVexNum();
 	// 返回图中的边数
 	public int getArcNum();
+	// 返回邻接矩阵
+	public int[][] getArcs();
+	// 返回顶点数组
+	public Object[] getVexs();
 	// 给定顶点的位置v，返回其对应的顶点值
 	public Object getVex(int x) throws Exception;
 	// 给定顶点的值vex，返回其在图中的位置
