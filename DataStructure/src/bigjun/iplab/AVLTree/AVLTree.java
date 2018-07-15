@@ -51,7 +51,7 @@ public class AVLTree<E> {
 			p.right = r.left;	//把p右子树的左节点嫁接到p的右节点，如上图，把BL作为A的右子节点
 			if (r.left != null)	//如果B的左节点BL不为空，把BL的父节点设为A
 				r.left.parent = p;
-			r.parent = p.parent;          //A的父节点设为B的父节点
+			r.parent = p.parent;  //A的父节点设为B的父节点
 			if (p.parent == null)		  //如果p是根节点
                 root = r;				  //r变为父节点，即B为父节点
             else if (p.parent.left == p)  //如果p是左子节点
